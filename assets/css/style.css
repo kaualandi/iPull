@@ -1,0 +1,121 @@
+:root {
+    --color-primary: #14B305;
+    --font: #1C1B19;
+    --background: #fffff7;
+    --background-tp: #fffff76b;
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--font);
+}
+header img {
+    width: calc(1.375rem + 1.5vw);
+}
+header h1 {
+    margin: 0;
+}
+header a {
+    transition: .3s;
+}
+header a:hover {
+    transform: scale(1.1);
+}
+body {
+    max-width: 500px;
+    margin: auto;
+    height: 100vh;
+    background: url('../img/bg.jpg') no-repeat center left fixed;
+    background-size: cover;
+    padding: 1em;
+}
+
+body .container-fluid {
+    background: var(--background-tp);
+    backdrop-filter: blur(3px);
+    border-radius: 15px;
+}
+body#body a {
+    color: var(--font);
+    text-decoration: none;
+}
+body#body .itens-container .itens .col-12 {
+    padding: 13px;
+    background: var(--background-tp);
+    cursor: pointer;
+    transition: .3s;
+    border: 0;
+}
+body#body .itens-container .itens .col-12:first-child {
+    border-radius: 15px 15px 0 0;
+    border-top: 0;
+}
+body#body .itens-container .itens .col-12:last-child {
+    border-radius: 0 0 15px 15px;
+}
+body#body .itens-container .itens .col-12+.col-12 {
+    border-top: 1px var(--background) solid;
+}
+body#body .itens-container .itens:hover .col-12 {
+    border-color: transparent !important;
+    background: transparent;
+}
+body#body .itens-container .itens:hover .col-12:hover {
+    border-radius: 15px;
+    background: var(--background);
+}
+
+body#body #selected-data input,
+body#body #selected-data button,
+#main_result #infors input {
+    border: 0;
+    background: transparent;
+    color: var(--font);
+    padding: 0;
+    margin: 0 auto;
+    padding: .3rem .5rem;
+    border: 1px var(--font) solid;
+    max-width: 300px;
+    transition: .3s;
+}
+#main_result #infors input {
+    
+}
+body#body #selected-data input {
+    width: calc(100% - 2.8em);
+    border-radius: 10px 0 0 10px ;
+}
+body#body #selected-data button {
+    border-radius: 0 10px 10px 0;
+}
+body#body #selected-data input:hover,
+body#body #selected-data button:hover {
+    border-color: var(--background);
+}
+body#body #selected-data input:focus,
+body#body #selected-data button:focus {
+    outline: 0;
+    background: var(--background);
+}
+
+@media screen and (min-width: 576px) {
+    body#body .itens-container .itens .col-12+.col-12 {
+        border-top: 0;
+    }
+    body#body .itens-container .itens .col-12:nth-child(1) {
+        border-radius: 15px 0 0 0;
+        border-bottom: 1px var(--background) solid;
+        border-right: 1px var(--background) solid;
+    }
+    body#body .itens-container .itens .col-12:nth-child(2) {
+        border-bottom: 1px var(--background) solid;
+        border-radius: 0 15px 0 0;
+    }
+    body#body .itens-container .itens .col-12:nth-child(3) {
+        border-radius: 0 0 0 15px;
+        border-right: 1px var(--background) solid;
+    }
+    body#body .itens-container .itens .col-12:nth-child(4) {
+        border-radius: 0 0 15px 0;
+    }
+}
